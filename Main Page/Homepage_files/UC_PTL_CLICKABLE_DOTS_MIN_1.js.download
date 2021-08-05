@@ -1,0 +1,12 @@
+(function () {
+ "use strict";  if (!window.jm_config_dots) {
+ window.jm_config_dots = true; var originalSetTabIndicators = window.setTabIndicators;   window.setTabIndicators = function () {
+
+ 
+ 
+ var returnVal = originalSetTabIndicators.apply(this, arguments);   var dots = document.querySelectorAll('.lpTabIndicators .dot'),
+ tabs = document.querySelectorAll('.lpTabId span.ps_box-value'),
+ titles = document.querySelectorAll('.lpnameedit input'); [].forEach.call(dots, function (d, idx) {
+ d.setAttribute('title',titles[idx].value); d.addEventListener("click", function () {
+ lpSwipeToTabFromDD(tabs[idx].innerHTML); }); }); return returnVal; }; }
+}());

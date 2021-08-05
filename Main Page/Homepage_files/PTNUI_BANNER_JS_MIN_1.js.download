@@ -1,0 +1,89 @@
+var PTBanner = {
+ UpdateContext: function(ctxStr, hpId) {
+ var sessBannerId = "ptbanner_" + hpId; var i=0; var newParams={};     var arrParams = ctxStr.split("&"); var arrKV;  for (i=0; i<arrParams.length; i++){
+ arrKV = arrParams[i].split("="); if (arrKV.length == 2)
+ newParams[arrKV[0]]=arrKV[1]; else {
+ newParams[arrParams[i]] = null;  }
+ }
+ 
+ var updatedGrouplets = []; for (i=0; i<groupletList.length; i++) { 
+ var gId = groupletList[i][0]; if (gId.indexOf("PTNUI_LAND_REC_GROUPLET") > 0) {
+ var gEl = document.getElementById(gId); var pageEl = getHTMLObjectByClass(gEl, "ps_box-scrollarea-row"); if (!pageEl)
+ continue; tabIdEl = pageEl.querySelector(".lppagehdr .lpTabId .ps_box-value"); if (!tabIdEl)
+ continue; if (tabIdEl.innerHTML != hpId) 
+ continue;  if (gEl.offsetParent) {
+ var thisTile = gEl.offsetParent.offsetParent;  if (thisTile && (/nuipintile/.test(thisTile.className)))
+ continue;  }
+
+ 
+ if (groupletList[i][2] != "")
+ groupletList[i][2] = PTBanner.UpdateGroupletURL(groupletList[i][2], newParams);   if (groupletList[i][3] != "")
+ groupletList[i][3] = PTBanner.UpdateGroupletURL(groupletList[i][3], newParams);  updatedGrouplets.push(groupletList[i]); }
+ }
+ DoReloadGrouplets(updatedGrouplets, true); },
+
+ UpdateGroupletURL: function (groupletURL, oCtxMap) {
+ var oTileURL = {};   var arrKV=[];   var j=0;  var ocStr="";  var ncStr="";    var qPos = groupletURL.indexOf("?"); if (qPos == -1) {
+ 
+ for (var key in oCtxMap) {
+ if (ncStr != "")
+ ncStr = ncStr + "&"; ncStr = ncStr + key + "=" + oCtxMap[key];  }
+ groupletURL = groupletURL + "?" + ncStr; } else {
+ 
+ var tmp = groupletURL.substring(qPos+1);  arrParams = tmp.split("&"); for (j=0; j<arrParams.length; j++) {
+ arrKV = arrParams[j].split("="); arrKV.forEach(function () {
+ oTileURL[arrKV[0] ] = arrKV[1];  }); }
+ 
+ 
+ for (var key in oCtxMap) {
+ 
+ if (oCtxMap[key] != null)
+ ncStr = key + "=" + oCtxMap[key];  else
+ ncStr = "";  if (key in oTileURL){
+ ocStr = key + "=" + oTileURL[key]; if ((ncStr == "") && (groupletURL.indexOf(ocStr + "&") != -1))
+ ocStr = ocStr + "&";  groupletURL = groupletURL.replace(ocStr, ncStr);  }
+ else {
+ 
+ if (ncStr != "")
+ groupletURL = groupletURL + "&" + ncStr;  }
+ }
+ 
+ }
+ return groupletURL; },
+
+ ShowHide: function(el) {
+ var bnrContEl = document.querySelector('.lptabpnl>.ps_box-scrollarea-row:not(.psc_invisible)>.lpbanner-cont'); if (bnrContEl) {
+ if (hasClass(bnrContEl, "collapsed")) {
+ removeClass(bnrContEl, "collapsed"); el.innerHTML = 'Hide Dashboard Header'; } else {
+ addClass(bnrContEl, "collapsed"); el.innerHTML = 'Show Dashboard Header'; }
+ if (typeof SetGridSize == 'function')
+ SetGridSize();  } 
+ 
+ if (document.querySelector('#PT_CONTENT') != null) { 
+ var ptMaskEl = document.querySelector('#pt_modalMask'); if (ptMaskEl)
+ ptMaskEl.click(); } 
+ },
+
+ TogglePin: function(el) {
+ var bnrContEl = getHTMLObjectByClass(el, "lpbanner-cont"); if (!bnrContEl) return; if (hasClass(bnrContEl, 'pinned')) {
+ replaceClass(bnrContEl, 'pinned', 'unpin');  } else if (hasClass(bnrContEl, 'unpin')) {
+ replaceClass(bnrContEl, 'unpin', 'pinned');  } else {
+ addClass(bnrContEl, 'pinned'); }
+ if (typeof SetGridSize == 'function')
+ SetGridSize(); },
+
+ MinMax: function(el){
+ 
+ var bnrContEl = document.querySelector('.lptabpnl>.ps_box-scrollarea-row:not(.psc_invisible)>.lpbanner-cont'); if (bnrContEl) {
+ var btn = el.getElementsByTagName("img"); if (hasClass(bnrContEl, "lpMax")) {
+ replaceClass(bnrContEl, "lpMax", "lpMin"); el.parentNode.setAttribute('title', 'Maximize Dashboard Header'); if (btn.length > 0) {
+ btn[0].setAttribute('alt', 'Maximize Dashboard Header'); }
+ } else if (hasClass(bnrContEl, "lpMin")) {
+ replaceClass(bnrContEl, "lpMin", "lpMax"); el.parentNode.setAttribute('title', 'Minimize Dashboard Header'); if (btn.length > 0) {
+ btn[0].setAttribute('alt', 'Minimize Dashboard Header'); }
+ } else {
+ addClass(bnrContEl, "lpMin"); }
+ if (typeof SetGridSize == 'function')
+ SetGridSize();  }
+ }
+};

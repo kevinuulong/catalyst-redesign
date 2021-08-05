@@ -1,0 +1,75 @@
+@import "fonts";
+@import "colors";
+@import "sizes";
+
+// Footer
+.ps_footer {
+	display: none;
+}
+
+// Header
+.ps_header_bar {
+	background-color: transparent !important;
+	border: none !important;
+	color: #000 !important;
+}
+
+// Thing under the Header
+#win0hdrdivPT_AG_LAYOUT_PT_AG_GROUPBOX3 {
+	display: none;
+}
+
+* {
+	background-color: transparent;
+    font-family: 'Poppins', sans-serif;
+    overflow: visible;
+}
+
+// Header Text
+.ps-text {
+    color: #000 !important;
+    // font-size: $size * 1.6 !important;
+}
+
+// Tiles Images
+.ps-img, .ps_process, .ps-staticimg {
+    display: none;
+}
+
+// Disable Hover Of Some Tiles (I don't know why they were sperate styles)
+.ps_menuitem:not(.psc_disabled):hover, .psc_rowact:not(.psc_disabled):hover {
+    background-color: transparent;
+}
+
+// Tiles
+.ps_grid-row, .nuitile, .nuilp {
+    background-color: $red !important;
+    box-shadow: none;
+    width: $size * 7;
+    height: $size * 7;
+    padding: $size !important;
+    border-radius: $size;
+}
+
+.nuitile {
+    margin: $size !important;
+}
+
+// Tiles Labels
+.ps-label, .ps_groupleth{
+    text-shadow: none;
+    color: $white !important;
+    font-size: $size * 0.8;
+    font-weight: 600;
+    line-height: $size * 1.2;
+    overflow: visible !important;
+    white-space: normal !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: flex-end;
+}
+
+// Tile Group
+#win0divPTNUI_LAND_WRK_GROUPBOX8\$0 {
+    width: 100% !important;
+}

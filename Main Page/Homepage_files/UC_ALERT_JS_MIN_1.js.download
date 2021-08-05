@@ -1,0 +1,40 @@
+function raiseAlert(messageArray, homepage) {
+
+
+  if (document.readyState){ 
+ document.onreadystatechange = function(){
+ if (document.readyState == "loaded" || document.readyState == "complete"){
+ document.onreadystatechange = null; var pageName='';  if (document.getElementById('PTNUI_CURLP_ID')) {
+  pageName = document.getElementById('PTNUI_CURLP_ID').value;  }
+ else {
+ if (szCrefID == 'PT_AGSTARTPAGE_NUI_GBL') {
+ pageName = ptgpPage.pageTitle; }
+  }
+ var alertBanner = document.createElement("div"); alertBanner.setAttribute("style", "color: black; background: yellow; padding: 10px"); alertBanner.setAttribute("id", "alert-banner");  if (messageArray.findIndex(function(a) { return a.page===pageName}) >= 0) {
+  alertBanner.innerHTML=messageArray.find(function(a){ return a.page===pageName}).message;  } else {
+  alertBanner.innerHTML='No message found';  }
+
+ var pt_main = document.getElementById("PT_MAIN"); if (homepage.includes(pageName)) {
+ if (!document.body.contains(document.getElementById("alert-banner"))) {
+ pt_main.insertBefore(alertBanner,pt_main.childNodes[0]); }
+ }
+ }
+ }; } else { 
+ document.onload = function(){
+ 
+ var pageName = ''; if (document.getElementById('PTNUI_CURLP_ID')) {
+  pageName = document.getElementById('PTNUI_CURLP_ID').value;  }
+ else {
+ if (szCrefID == 'PT_AGSTARTPAGE_NUI_GBL') {
+ pageName = ptgpPage.pageTitle; }
+  }
+
+ var alertBanner = document.createElement("div"); alertBanner.setAttribute("style", "color: black; background: yellow; padding: 10px"); alertBanner.setAttribute("id", "alert-banner");  if (messageArray.findIndex(function(a) { return a.page===pageName})>=0) {
+  alertBanner.innerHTML=messageArray.find(function(a){ return a.page===pageName}).message;  } else {
+  alertBanner.innerHTML='No message found';  }
+ var pt_main = document.getElementById("PT_MAIN"); if (homepage.includes(pageName)) {
+ if (!document.body.contains(document.getElementById("alert-banner"))) {
+ pt_main.insertBefore(alertBanner,pt_main.childNodes[0]); }
+ }
+ }; }
+}

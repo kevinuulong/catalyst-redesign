@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+.ps_footer {
+  display: none;
+}
+
+.ps_header_bar {
+  background-color: transparent !important;
+  border: none !important;
+  color: #000 !important;
+}
+
+#win0hdrdivPT_AG_LAYOUT_PT_AG_GROUPBOX3 {
+  display: none;
+}
+
+* {
+  background-color: transparent;
+  font-family: 'Poppins', sans-serif;
+  overflow: visible;
+}
+
+.ps-text {
+  color: #000 !important;
+}
+
+.ps-img, .ps_process, .ps-staticimg {
+  display: none;
+}
+
+.ps_menuitem:not(.psc_disabled):hover, .psc_rowact:not(.psc_disabled):hover {
+  background-color: transparent;
+}
+
+.ps_grid-row, .nuitile, .nuilp {
+  background-color: #E31837 !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  width: 280px;
+  height: 280px;
+  padding: 40px !important;
+  border-radius: 40px;
+}
+
+.nuitile {
+  margin: 40px !important;
+}
+
+.ps-label, .ps_groupleth {
+  text-shadow: none;
+  color: #FFFFFF !important;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 48px;
+  overflow: visible !important;
+  white-space: normal !important;
+  height: 100% !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#win0divPTNUI_LAND_WRK_GROUPBOX8\$0 {
+  width: 100% !important;
+}
+/*# sourceMappingURL=custom.css.map */
