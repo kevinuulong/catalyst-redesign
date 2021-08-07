@@ -61,6 +61,16 @@
   border-radius: 40px;
 }
 
+.nuilp::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-image: url("../../icons/arrow_next.svg");
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
 .ps_grid-div .nuitile:nth-of-type(2) .nuilp, .ps_grid-div .nuitile:nth-of-type(4) .nuilp, .ps_grid-div .nuitile:nth-of-type(5) .nuilp, .ps_grid-div .nuitile:nth-of-type(8) .nuilp {
   background-color: #000 !important;
 }

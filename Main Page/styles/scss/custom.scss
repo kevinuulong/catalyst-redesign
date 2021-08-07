@@ -66,6 +66,16 @@
     border-radius: $size;
 }
 
+.nuilp::after {
+    content: "";
+    width: $size;
+    height: $size;
+    background-image: url("../../icons/arrow_next.svg");
+    position: absolute;
+    top: $size / 2;
+    right: $size / 2;
+}
+
 // Determine the color of the tiles
 .ps_grid-div { 
     .nuitile:nth-of-type(2), .nuitile:nth-of-type(4), .nuitile:nth-of-type(5), .nuitile:nth-of-type(8){
