@@ -28,7 +28,22 @@
 // Header Text
 .ps-text {
     color: #000 !important;
-    // font-size: $size * 1.6 !important;
+    font-size: $size * 1.6 !important;
+    font-weight: 600 !important;
+    height: $size * 2;
+    line-height: $size * 2 !important;
+}
+.ps-button::before {
+    display: none;
+    content: "";
+}
+.ps-button {
+    transform: translateY($size * -3);
+    left: 0;
+    overflow: visible !important;
+}
+.nuihdr_hpbtn {
+    overflow: visible;
 }
 
 // Tiles Images
@@ -51,6 +66,19 @@
     border-radius: $size;
 }
 
+// Determine the color of the tiles
+.ps_grid-div { 
+    .nuitile:nth-of-type(2), .nuitile:nth-of-type(4), .nuitile:nth-of-type(5), .nuitile:nth-of-type(8){
+        .nuilp {
+            background-color: #000 !important;
+        }
+    }
+
+    .nuitile:nth-of-type(6) {
+        display: none;
+    }
+}
+
 .nuitile {
     margin: $size !important;
 }
@@ -71,5 +99,41 @@
 
 // Tile Group
 #win0divPTNUI_LAND_WRK_GROUPBOX8\$0 {
-    width: 100% !important;
+    width: $size * 38 !important;
+}
+
+// Content Container
+.ps_mid_section, .pt_wrapper, .ps_wrapper {
+    height: $size * 20 !important;
+    position: absolute;
+    bottom: 0;
+    width: $size * 38;
+}
+
+:root:not(.psc_mode-ag):not(.psc_mode-md) .pt_homepage {
+    background-color: $white !important;
+}
+
+// Tasks Labels
+#win0divPTNUI_LAND_REC_GROUPLET\$4 > .ps_groupleth {
+    align-items: flex-start;
+    height: calc( 100% - #{$size} ) !important;
+}
+#win25div\$ICField33 > * {
+    color: $white !important;
+    font-size: $size * 0.6;
+    line-height: $size * 0.9;
+    font-weight: 400;
+    margin: 0;
+}
+#win25div\$ICField30 {
+    text-align: left;
+    padding-left: $size;
+    padding-right: $size;
+    bottom: $size !important;
+    overflow: visible !important;
+}
+#SCC_TASKAPP_WRK_PTGP_TILE_LIVDAT_2::before {
+    content: " ";
+    white-space: pre;
 }

@@ -21,6 +21,26 @@
 
 .ps-text {
   color: #000 !important;
+  font-size: 64px !important;
+  font-weight: 600 !important;
+  height: 80px;
+  line-height: 80px !important;
+}
+
+.ps-button::before {
+  display: none;
+  content: "";
+}
+
+.ps-button {
+  -webkit-transform: translateY(-120px);
+          transform: translateY(-120px);
+  left: 0;
+  overflow: visible !important;
+}
+
+.nuihdr_hpbtn {
+  overflow: visible;
 }
 
 .ps-img, .ps_process, .ps-staticimg {
@@ -39,6 +59,14 @@
   height: 280px;
   padding: 40px !important;
   border-radius: 40px;
+}
+
+.ps_grid-div .nuitile:nth-of-type(2) .nuilp, .ps_grid-div .nuitile:nth-of-type(4) .nuilp, .ps_grid-div .nuitile:nth-of-type(5) .nuilp, .ps_grid-div .nuitile:nth-of-type(8) .nuilp {
+  background-color: #000 !important;
+}
+
+.ps_grid-div .nuitile:nth-of-type(6) {
+  display: none;
 }
 
 .nuitile {
@@ -63,6 +91,45 @@
 }
 
 #win0divPTNUI_LAND_WRK_GROUPBOX8\$0 {
-  width: 100% !important;
+  width: 1520px !important;
+}
+
+.ps_mid_section, .pt_wrapper, .ps_wrapper {
+  height: 800px !important;
+  position: absolute;
+  bottom: 0;
+  width: 1520px;
+}
+
+:root:not(.psc_mode-ag):not(.psc_mode-md) .pt_homepage {
+  background-color: #FFFFFF !important;
+}
+
+#win0divPTNUI_LAND_REC_GROUPLET\$4 > .ps_groupleth {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: calc( 100% - 40px) !important;
+}
+
+#win25div\$ICField33 > * {
+  color: #FFFFFF !important;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 400;
+  margin: 0;
+}
+
+#win25div\$ICField30 {
+  text-align: left;
+  padding-left: 40px;
+  padding-right: 40px;
+  bottom: 40px !important;
+  overflow: visible !important;
+}
+
+#SCC_TASKAPP_WRK_PTGP_TILE_LIVDAT_2::before {
+  content: " ";
+  white-space: pre;
 }
 /*# sourceMappingURL=custom.css.map */
