@@ -17,6 +17,8 @@
   left: 80px;
   top: -200px;
   background-image: url("../../logos/uc.svg");
+  background-position: center;
+  background-size: cover;
 }
 
 .ps_header::after {
@@ -101,8 +103,18 @@
   background-color: transparent;
 }
 
-.ps_grid-row, .nuitile, .nuilp {
+.nuitile {
   background-color: #E31837 !important;
+}
+
+.nuitile::before {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-backdrop-filter: blur(0);
+          backdrop-filter: blur(0);
+}
+
+.ps_grid-row, .nuilp {
   -webkit-box-shadow: none;
           box-shadow: none;
   width: 280px;

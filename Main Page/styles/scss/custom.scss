@@ -25,6 +25,8 @@
     left: $size * 2;
     top: $size * -5;
     background-image: url("../../logos/uc.svg");
+    background-position: center;
+    background-size: cover;
 }
 
 // Avatar
@@ -109,8 +111,14 @@
 }
 
 // Tiles
-.ps_grid-row, .nuitile, .nuilp {
+.nuitile {
     background-color: $red !important;
+}
+.nuitile::before {
+    box-shadow: none;
+    backdrop-filter: blur(0);
+}
+.ps_grid-row, .nuilp {
     box-shadow: none;
     width: $size * 7;
     height: $size * 7;
