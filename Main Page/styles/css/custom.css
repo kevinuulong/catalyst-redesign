@@ -9,6 +9,29 @@
   color: #000 !important;
 }
 
+.ps_header::before {
+  content: "";
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: 80px;
+  top: -200px;
+  background-image: url("../../logos/uc.svg");
+}
+
+.ps_header::after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  right: 80px;
+  top: -200px;
+  background-image: url("../../avatars/kevinLong.jpg");
+  background-position: top;
+  background-size: cover;
+  border-radius: 40px;
+}
+
 #win0hdrdivPT_AG_LAYOUT_PT_AG_GROUPBOX3 {
   display: none;
 }
@@ -51,8 +74,8 @@
 }
 
 .ps-button {
-  -webkit-transform: translateY(-120px);
-          transform: translateY(-120px);
+  -webkit-transform: translateY(-80px);
+          transform: translateY(-80px);
   left: 0;
   overflow: visible !important;
 }
@@ -132,6 +155,7 @@
 #win0divPTNUI_LAND_WRK_GROUPBOX8\$0 {
   width: 1520px !important;
   padding-left: 40px;
+  padding-top: 40px;
 }
 
 .ps_mid_section, .pt_wrapper, .ps_wrapper {
