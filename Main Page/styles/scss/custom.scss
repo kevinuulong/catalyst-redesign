@@ -33,9 +33,25 @@
     height: $size * 2;
     line-height: $size * 2 !important;
 }
+#PTNUI_LAND_WRK_GROUPBOX14\$PIMG {
+    padding: 0 !important;
+}
+#PTNUI_LAND_WRK_GROUPBOX14\$PIMG::after {
+    content: "";
+    max-height: none;
+    width: $size * 2 !important;
+    height: $size * 2 !important;
+    background-image: url("../../icons/drop_down_arrow.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: $size * -2;
+}
 .ps-button::before {
     display: none;
-    content: "";
+    content: none;
 }
 .ps-button {
     transform: translateY($size * -3);
@@ -44,6 +60,13 @@
 }
 .nuihdr_hpbtn {
     overflow: visible;
+}
+.ps_header-banner, .ps_header_bar {
+    text-align: start;
+}
+#win0divPTNUI_LAND_WRK_GROUPBOX14 {
+    position: absolute;
+    left: $size * 2;
 }
 
 // Tiles Images
@@ -71,6 +94,8 @@
     width: $size;
     height: $size;
     background-image: url("../../icons/arrow_next.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
     position: absolute;
     top: $size / 2;
     right: $size / 2;
@@ -110,6 +135,7 @@
 // Tile Group
 #win0divPTNUI_LAND_WRK_GROUPBOX8\$0 {
     width: $size * 38 !important;
+    padding-left: $size;
 }
 
 // Content Container
@@ -118,6 +144,7 @@
     position: absolute;
     bottom: 0;
     width: $size * 38;
+    right: 0;
 }
 
 :root:not(.psc_mode-ag):not(.psc_mode-md) .pt_homepage {

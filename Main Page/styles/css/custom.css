@@ -27,9 +27,27 @@
   line-height: 80px !important;
 }
 
+#PTNUI_LAND_WRK_GROUPBOX14\$PIMG {
+  padding: 0 !important;
+}
+
+#PTNUI_LAND_WRK_GROUPBOX14\$PIMG::after {
+  content: "";
+  max-height: none;
+  width: 80px !important;
+  height: 80px !important;
+  background-image: url("../../icons/drop_down_arrow.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: -80px;
+}
+
 .ps-button::before {
   display: none;
-  content: "";
+  content: none;
 }
 
 .ps-button {
@@ -41,6 +59,15 @@
 
 .nuihdr_hpbtn {
   overflow: visible;
+}
+
+.ps_header-banner, .ps_header_bar {
+  text-align: start;
+}
+
+#win0divPTNUI_LAND_WRK_GROUPBOX14 {
+  position: absolute;
+  left: 80px;
 }
 
 .ps-img, .ps_process, .ps-staticimg {
@@ -66,6 +93,8 @@
   width: 40px;
   height: 40px;
   background-image: url("../../icons/arrow_next.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
   top: 20px;
   right: 20px;
@@ -102,6 +131,7 @@
 
 #win0divPTNUI_LAND_WRK_GROUPBOX8\$0 {
   width: 1520px !important;
+  padding-left: 40px;
 }
 
 .ps_mid_section, .pt_wrapper, .ps_wrapper {
@@ -109,6 +139,7 @@
   position: absolute;
   bottom: 0;
   width: 1520px;
+  right: 0;
 }
 
 :root:not(.psc_mode-ag):not(.psc_mode-md) .pt_homepage {
