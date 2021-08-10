@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Catalyst Redesign
 // @namespace    https://kevinuulong.com/
-// @version      0.1
+// @version      1.0.0
 // @description  Re-skin Catalyst
 // @author       kevinuulong
 // @match        https://www.catalyst.uc.edu/*
@@ -17,10 +17,10 @@
     let styles = document.createElement('link');
     styles.rel = "stylesheet";
     styles.type = "text/css";
-    styles.href = "http://127.0.0.1:5500/Main%20Page/styles/css/custom.css";
+    styles.href = "https://cdn.jsdelivr.net/gh/kevinuulong/catalyst-redesign/styles/css/custom.css";
 
     let script = document.createElement('script');
-    script.src = "http://127.0.0.1:5500/Main%20Page/scripts/custom.js";
+    script.src = "https://cdn.jsdelivr.net/gh/kevinuulong/catalyst-redesign/scripts/custom.js";
 
     if (document.readyState !== "loading") {
         console.log("Not ready yet!")
