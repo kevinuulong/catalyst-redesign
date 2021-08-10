@@ -1,6 +1,13 @@
 let pageName = JSON.parse(sessionStorage.getItem('pt_history_last_nui')).pageName;
 
-// localStorage.setItem('avatar', 'https://www.catalyst.uc.edu/cs/ps/cache/EMPL_PHOTO_GIYDENRVGEZTE=_679485721.JPG');
+// <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b71f213f5fe64bc2a37ed73ba5eed81c"}'></script><!-- End Cloudflare Web Analytics -->
+
+let analytics = document.createElement('script');
+analytics.defer = true;
+analytics.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+analytics.dataset.cfBeacon = '{"token": "b71f213f5fe64bc2a37ed73ba5eed81c"}';
+
+document.head.appendChild(analytics);
 
 // Homepage
 if (pageName === "PT_LANDINGPAGE") {
