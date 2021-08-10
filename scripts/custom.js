@@ -1,7 +1,5 @@
 let pageName = JSON.parse(sessionStorage.getItem('pt_history_last_nui')).pageName;
 
-// <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b71f213f5fe64bc2a37ed73ba5eed81c"}'></script><!-- End Cloudflare Web Analytics -->
-
 let analytics = document.createElement('script');
 analytics.defer = true;
 analytics.src = 'https://static.cloudflareinsights.com/beacon.min.js';
