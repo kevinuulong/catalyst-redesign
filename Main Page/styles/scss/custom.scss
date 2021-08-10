@@ -15,47 +15,11 @@
 }
 
 #PT_HEADER {
-    // display: inline-flex;
     display: inline-block;
     width: 100%;
     height: calc( 100% - #{$size * 20} );
     vertical-align: top;
-    // height: fit-content;
-    // padding: $size;
-    // gap: $size;
-    // margin: $size;
 }
-
-// UC Logo
-// NOTE: Probably should make this a real element and not a pseudo element
-// because it would make more sense if I am already making the avatar real
-// .ps_header::before {
-//     content: "";
-//     width: $size * 2;
-//     height: $size * 2;
-//     position: absolute;
-//     left: $size * 2;
-//     top: $size * -5;
-//     background-image: url("../../logos/uc.svg");
-//     background-position: center;
-//     background-size: cover;
-// }
-
-// Avatar
-// NOTE: Probably need to make this a real element and not just a 
-// pseudo element because of hover action
-// .ps_header::after {
-//     content: "";
-//     width: $size * 2;
-//     height: $size * 2;
-//     position: absolute;
-//     right: $size * 2;
-//     top: $size * -5;
-//     background-image: url("../../avatars/kevinLong.jpg");
-//     background-position: top;
-//     background-size: cover;
-//     border-radius: $size;
-// }
 
 #logo {
     width: $size * 2;
@@ -129,7 +93,6 @@
     content: none;
 }
 .ps-button {
-    // transform: translateY($size * -2);
     left: 0;
     overflow: visible !important;
     bottom: 0;
