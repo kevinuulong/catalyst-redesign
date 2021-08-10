@@ -297,7 +297,7 @@
   color: #000000;
 }
 
-.sidebarOption:hover {
+.sidebarOption:hover:not(.selected) {
   text-decoration: underline;
   -webkit-text-decoration-color: #E31837 !important;
           text-decoration-color: #E31837 !important;

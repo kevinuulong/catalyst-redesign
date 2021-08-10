@@ -298,7 +298,7 @@
 .sidebarOption:link {
     color: $black;
 }
-.sidebarOption:hover {
+.sidebarOption:hover:not(.selected) {
     text-decoration: underline;
     text-decoration-color: $red !important;
     color: $black !important;
