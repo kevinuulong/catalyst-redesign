@@ -9,29 +9,43 @@
   color: #000 !important;
 }
 
-.ps_header::before {
-  content: "";
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  left: 80px;
-  top: -200px;
-  background-image: url("../../logos/uc.svg");
-  background-position: center;
-  background-size: cover;
+#PT_HEADER {
+  display: inline-block;
+  width: 100%;
+  height: calc( 100% - 700px);
+  vertical-align: top;
 }
 
-.ps_header::after {
-  content: "";
-  width: 80px;
-  height: 80px;
+#logo {
+  width: 70px;
+  height: 70px;
+  background-image: url("../../logos/uc.svg");
+  background-position: top;
+  background-size: cover;
+  border-radius: 35px;
+  display: inline-block;
   position: absolute;
-  right: 80px;
-  top: -200px;
+  top: 35px;
+  left: 70px;
+}
+
+#avatar {
+  width: 70px;
+  height: 70px;
   background-image: url("../../avatars/kevinLong.jpg");
   background-position: top;
   background-size: cover;
-  border-radius: 40px;
+  border-radius: 35px;
+  display: inline-block;
+  position: absolute;
+  right: 70px;
+  top: 35px;
+}
+
+#PT_HEADER_PANEL {
+  bottom: 70px;
+  position: absolute;
+  width: 100%;
 }
 
 #win0hdrdivPT_AG_LAYOUT_PT_AG_GROUPBOX3 {
@@ -46,10 +60,10 @@
 
 .ps-text {
   color: #000 !important;
-  font-size: 64px !important;
+  font-size: 56px !important;
   font-weight: 600 !important;
-  height: 80px;
-  line-height: 80px !important;
+  height: 70px;
+  line-height: 70px !important;
 }
 
 #PTNUI_LAND_WRK_GROUPBOX14\$PIMG {
@@ -59,15 +73,15 @@
 #PTNUI_LAND_WRK_GROUPBOX14\$PIMG::after {
   content: "";
   max-height: none;
-  width: 80px !important;
-  height: 80px !important;
+  width: 70px !important;
+  height: 70px !important;
   background-image: url("../../icons/drop_down_arrow.svg");
   background-repeat: no-repeat;
   background-size: cover;
   display: inline-block;
   position: absolute;
   top: 0;
-  right: -80px;
+  right: -70px;
 }
 
 .ps-button::before {
@@ -76,10 +90,9 @@
 }
 
 .ps-button {
-  -webkit-transform: translateY(-80px);
-          transform: translateY(-80px);
   left: 0;
   overflow: visible !important;
+  bottom: 0;
 }
 
 .nuihdr_hpbtn {
@@ -92,7 +105,7 @@
 
 #win0divPTNUI_LAND_WRK_GROUPBOX14 {
   position: absolute;
-  left: 80px;
+  left: 70px;
 }
 
 .ps-img, .ps_process, .ps-staticimg {
@@ -117,22 +130,22 @@
 .ps_grid-row, .nuilp {
   -webkit-box-shadow: none;
           box-shadow: none;
-  width: 280px;
-  height: 280px;
-  padding: 40px !important;
-  border-radius: 40px;
+  width: 245px;
+  height: 245px;
+  padding: 35px !important;
+  border-radius: 35px;
 }
 
 .nuilp::after {
   content: "";
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   background-image: url("../../icons/arrow_next.svg");
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 17.5px;
+  right: 17.5px;
 }
 
 .ps_grid-div .nuitile:nth-of-type(2) .nuilp, .ps_grid-div .nuitile:nth-of-type(4) .nuilp, .ps_grid-div .nuitile:nth-of-type(5) .nuilp, .ps_grid-div .nuitile:nth-of-type(8) .nuilp {
@@ -144,15 +157,15 @@
 }
 
 .nuitile {
-  margin: 40px !important;
+  margin: 35px !important;
 }
 
 .ps-label, .ps_groupleth {
   text-shadow: none;
   color: #FFFFFF !important;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 600;
-  line-height: 48px;
+  line-height: 42px;
   overflow: visible !important;
   white-space: normal !important;
   height: 100% !important;
@@ -165,17 +178,23 @@
 }
 
 #win0divPTNUI_LAND_WRK_GROUPBOX8\$0 {
-  width: 1520px !important;
-  padding-left: 40px;
-  padding-top: 40px;
+  width: 1330px !important;
+  padding-left: 35px;
+  padding-bottom: 0;
 }
 
 .ps_mid_section, .pt_wrapper, .ps_wrapper {
-  height: 800px !important;
+  height: 700px !important;
   position: absolute;
   bottom: 0;
-  width: 1520px;
-  right: 0;
+  width: 1330px;
+}
+
+#PT_WRAPPER {
+  position: relative;
+  display: inline-block;
+  height: 100% !important;
+  vertical-align: top;
 }
 
 :root:not(.psc_mode-ag):not(.psc_mode-md) .pt_homepage {
@@ -186,27 +205,34 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  height: calc( 100% - 40px) !important;
+  height: calc( 100% - 35px) !important;
 }
 
 #win25div\$ICField33 > * {
   color: #FFFFFF !important;
-  font-size: 24px;
-  line-height: 36px;
+  font-size: 21px;
+  line-height: 31.5px;
   font-weight: 400;
   margin: 0;
 }
 
 #win25div\$ICField30 {
   text-align: left;
-  padding-left: 40px;
-  padding-right: 40px;
-  bottom: 40px !important;
+  padding-left: 35px;
+  padding-right: 35px;
+  bottom: 35px !important;
   overflow: visible !important;
 }
 
 #SCC_TASKAPP_WRK_PTGP_TILE_LIVDAT_2::before {
   content: " ";
   white-space: pre;
+}
+
+#sidebar {
+  width: 350px;
+  height: 100%;
+  border-right: #CCC solid 3px;
+  display: inline-block;
 }
 /*# sourceMappingURL=custom.css.map */
