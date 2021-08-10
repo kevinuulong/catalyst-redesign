@@ -32,7 +32,6 @@
 #avatar {
   width: 70px;
   height: 70px;
-  background-image: url("../../avatars/kevinLong.jpg");
   background-position: top;
   background-size: cover;
   border-radius: 35px;
@@ -106,6 +105,14 @@
 #win0divPTNUI_LAND_WRK_GROUPBOX14 {
   position: absolute;
   left: 70px;
+}
+
+.ps-button-wrapper {
+  display: none;
+}
+
+.nuihdr_logo {
+  display: none;
 }
 
 .ps-img, .ps_process, .ps-staticimg {
@@ -197,6 +204,10 @@
   vertical-align: top;
 }
 
+#PT_MAIN {
+  background: #FFFFFF !important;
+}
+
 :root:not(.psc_mode-ag):not(.psc_mode-md) .pt_homepage {
   background-color: #FFFFFF !important;
 }
@@ -206,9 +217,10 @@
       -ms-flex-align: start;
           align-items: flex-start;
   height: calc( 100% - 35px) !important;
+  pointer-events: none;
 }
 
-#win25div\$ICField33 > * {
+[id*="ICField33"] > * {
   color: #FFFFFF !important;
   font-size: 21px;
   line-height: 31.5px;
@@ -216,9 +228,9 @@
   margin: 0;
 }
 
-#win25div\$ICField30 {
+[id*="ICField30"] {
   text-align: left;
-  padding-left: 35px;
+  padding-left: 31px;
   padding-right: 35px;
   bottom: 35px !important;
   overflow: visible !important;
@@ -229,10 +241,101 @@
   white-space: pre;
 }
 
+#SCC_TASKAPP_WRK_PTGP_TILE_LIVDAT_2 {
+  margin-top: 8.75px;
+}
+
+[id*=PTGP_TILE_LIVEDATA] {
+  position: absolute;
+  bottom: 35px;
+  left: 0;
+}
+
+[id*=PTGP_APP_WRK_PTGP_TILE_LIVDAT] {
+  color: #FFFFFF !important;
+  font-size: 21px;
+  line-height: 31.5px;
+  font-weight: 400;
+  margin: 0;
+  width: calc(100% - 35px);
+  text-align: left;
+  display: block;
+  margin-left: 25px !important;
+  overflow: hidden;
+}
+
+#win0divPTNUI_LAND_REC_GROUPLET\$1 > .ps_groupleth:not(.noAlert) {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: calc( 100% - 35px) !important;
+  position: relative;
+}
+
 #sidebar {
   width: 350px;
-  height: 100%;
+  height: calc(100% - 35px);
   border-right: #CCC solid 3px;
   display: inline-block;
+  padding-top: 35px;
+}
+
+.sidebarOption {
+  display: block;
+  width: calc(100% - 70px);
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 70px;
+  height: 70px;
+  margin-left: 35px;
+  margin-right: 35px;
+  position: relative;
+  cursor: pointer;
+}
+
+.sidebarOption:link {
+  color: #000000;
+}
+
+.sidebarOption:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #E31837 !important;
+          text-decoration-color: #E31837 !important;
+  color: #000000 !important;
+}
+
+.sidebarOption.selected {
+  color: #FFFFFF;
+  background-color: #E31837;
+  border-radius: 17.5px;
+}
+
+.sidebarOption.selected::before {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.sidebarOption::before {
+  content: "";
+  width: 35px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 35px;
+  margin-left: 17.5px;
+}
+
+#home::before {
+  background-image: url("../../icons/home.svg");
+}
+
+#notifications::before {
+  background-image: url("../../icons/notifications.svg");
+}
+
+#settings::before {
+  background-image: url("../../icons/settings.svg");
 }
 /*# sourceMappingURL=custom.css.map */

@@ -38,7 +38,6 @@
 #avatar {
     width: $size * 2;
     height: $size * 2;
-    background-image: url("../../avatars/kevinLong.jpg");
     background-position: top;
     background-size: cover;
     border-radius: $size;
@@ -106,6 +105,12 @@
 #win0divPTNUI_LAND_WRK_GROUPBOX14 {
     position: absolute;
     left: $size * 2;
+}
+.ps-button-wrapper {
+    display: none;
+}
+.nuihdr_logo {
+    display: none;
 }
 
 // Tiles Images
@@ -200,25 +205,38 @@
     vertical-align: top;
 }
 
+#PT_MAIN {
+    background: $white !important;
+}
+
 :root:not(.psc_mode-ag):not(.psc_mode-md) .pt_homepage {
     background-color: $white !important;
 }
+
+// #win0groupletPTNUI_LAND_REC_GROUPLET\$4 > div > div > .psc_tile_livedata > * {
+//     color: $white !important;
+//     font-size: $size * 0.6;
+//     line-height: $size * 0.9;
+//     font-weight: 400;
+//     margin: 0;
+// }
 
 // Tasks Labels
 #win0divPTNUI_LAND_REC_GROUPLET\$4 > .ps_groupleth {
     align-items: flex-start;
     height: calc( 100% - #{$size} ) !important;
+    pointer-events: none;
 }
-#win25div\$ICField33 > * {
+[id*="ICField33"] > * {
     color: $white !important;
     font-size: $size * 0.6;
     line-height: $size * 0.9;
     font-weight: 400;
     margin: 0;
 }
-#win25div\$ICField30 {
+[id*="ICField30"] {
     text-align: left;
-    padding-left: $size;
+    padding-left: $size - 4px;
     padding-right: $size;
     bottom: $size !important;
     overflow: visible !important;
@@ -227,10 +245,93 @@
     content: " ";
     white-space: pre;
 }
+#SCC_TASKAPP_WRK_PTGP_TILE_LIVDAT_2 {
+    margin-top: $size / 4;
+}
+
+// My Finances Label
+[id*=PTGP_TILE_LIVEDATA] {
+    position: absolute;
+    bottom: $size;
+    left: 0;
+}
+[id*=PTGP_APP_WRK_PTGP_TILE_LIVDAT] {
+    color: $white !important;
+    font-size: $size * 0.6;
+    line-height: $size * 0.9;
+    font-weight: 400;
+    margin: 0;
+    width: calc(100% - #{$size});
+    
+    text-align: left;
+    display: block;
+    margin-left: $size - 10px !important;
+    overflow: hidden;
+}
+#win0divPTNUI_LAND_REC_GROUPLET\$1 > .ps_groupleth:not(.noAlert) {
+    align-items: flex-start;
+    height: calc( 100% - #{$size} ) !important;
+    position: relative;
+}
 
 #sidebar {
     width: $size * 10;
-    height: 100%;
+    height: calc(100% - #{$size});
     border-right: #CCC solid 3px;
     display: inline-block;
+    padding-top: $size;
+}
+
+.sidebarOption {
+    display: block;
+    width: calc(100% - #{$size * 2});
+    font-weight: 600;
+    font-size: $size * 0.6;
+    line-height: $size * 2;
+    height: $size * 2;
+    margin-left: $size;
+    margin-right: $size;
+    position: relative;
+    cursor: pointer;
+}
+
+.sidebarOption:link {
+    color: $black;
+}
+.sidebarOption:hover {
+    text-decoration: underline;
+    text-decoration-color: $red !important;
+    color: $black !important;
+}
+
+.sidebarOption.selected {
+    color: $white;
+    background-color: $red;
+    border-radius: $size / 2;
+}
+
+.sidebarOption.selected::before {
+    filter: invert(100%);
+}
+
+.sidebarOption::before {
+    content: "";
+    width: $size;
+    height: $size;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: $size;
+    margin-left: $size / 2;
+}
+
+#home::before {
+    background-image: url("../../icons/home.svg");
+}
+#notifications::before {
+    background-image: url("../../icons/notifications.svg");
+}
+#settings::before {
+    background-image: url("../../icons/settings.svg");
 }
