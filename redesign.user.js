@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Catalyst Redesign
 // @namespace    https://kevinuulong.com/
-// @version      1.0.0
+// @version      2.0.0
 // @description  Re-skin Catalyst
 // @author       kevinuulong
 // @match        https://www.catalyst.uc.edu/*
@@ -13,6 +13,19 @@
     'use strict';
 
     let pageName = JSON.parse(sessionStorage.getItem('pt_history_last_nui')).pageName;
+
+    if (pageName === "PT_LANDINGPAGE") {
+        let loaderStyles = document.createElement('link');
+        loaderStyles.rel = "stylesheet";
+        loaderStyles.type = "text/css";
+        loaderStyles.href = "https://cdn.jsdelivr.net/gh/kevinuulong/catalyst-redesign/styles/css/loader.css";
+
+        let loaderScript = document.createElement('script');
+        loaderScript.src = "https://cdn.jsdelivr.net/gh/kevinuulong/catalyst-redesign/scripts/loader.js";
+
+        document.head.appendChild(loaderStyles);
+        document.head.appendChild(loaderScript);
+    }
 
     let styles = document.createElement('link');
     styles.rel = "stylesheet";
@@ -34,5 +47,6 @@
             document.head.appendChild(styles);
         }
         document.body.appendChild(script);
+        document.getElementById("loader").classList.toggle('loaded');
     }
 })();
