@@ -5,7 +5,7 @@ container.id = "loaderCotainer";
 
 let logo = document.createElement('img');
 logo.id = "loaderLogo";
-logo.src = "http://127.0.0.1:5500/logos/uc_white.svg";
+logo.src = "https://cdn.jsdelivr.net/gh/kevinuulong/catalyst-redesign/logos/uc_white.svg";
 
 let bar = document.createElement('div');
 bar.id = "loaderBar";
