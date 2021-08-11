@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Catalyst Redesign
 // @namespace    https://kevinuulong.com/
-// @version      3.0.0
+// @version      3.0.1
 // @description  Re-skin Catalyst
 // @author       kevinuulong
 // @match        https://www.catalyst.uc.edu/*
