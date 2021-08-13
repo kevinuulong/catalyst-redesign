@@ -278,7 +278,7 @@ body, html {
   background-color: #FFFFFF !important;
 }
 
-#win0divPTNUI_LAND_REC_GROUPLET\$4 > .ps_groupleth {
+#win0divPTNUI_LAND_REC_GROUPLET\$4 > .ps_groupleth:not(.noAlert) {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
