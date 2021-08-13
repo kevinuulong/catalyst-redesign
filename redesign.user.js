@@ -40,7 +40,7 @@
 
     if (document.readyState !== "loading") {
         console.log("Not ready yet!")
-        setTimeout(loadCustom, 1000);
+        setTimeout(loadCustom, 1500);
     } else {
         document.addEventListener("DOMContentLoaded", loadCustom);
     }

@@ -280,12 +280,13 @@
     border-right: #CCC solid 3px;
     display: inline-block;
     padding-top: $size;
+    position: relative;
 }
 
 .sidebarOption {
     display: block;
     width: calc(100% - #{$size * 2});
-    font-weight: 600;
+    font-weight: 600 !important;
     font-size: $size * 0.6;
     line-height: $size * 2;
     height: $size * 2;
@@ -297,6 +298,7 @@
 
 .sidebarOption:link {
     color: $black;
+    text-decoration: none;
 }
 .sidebarOption:hover:not(.selected) {
     text-decoration: underline;
@@ -334,4 +336,27 @@
 }
 #settings::before {
     background-image: url("../../icons/settings.svg");
+}
+
+a:link {
+    color: $red;
+    text-decoration: underline;
+    display: block;
+    font-weight: 400;
+    font-size: $size * 0.6;
+    line-height: $size * 2;
+    height: $size * 2;
+}
+
+#signOut {
+    margin-left: $size * 1.5;
+    margin-right: $size * 1.5;
+    position: absolute;
+    cursor: pointer;
+    bottom: $size;
+    width: calc(100% - #{$size * 3});
+}
+
+#signOut:hover {
+    color: $red !important;
 }

@@ -344,12 +344,13 @@ body, html {
   border-right: #CCC solid 3px;
   display: inline-block;
   padding-top: 35px;
+  position: relative;
 }
 
 .sidebarOption {
   display: block;
   width: calc(100% - 70px);
-  font-weight: 600;
+  font-weight: 600 !important;
   font-size: 21px;
   line-height: 70px;
   height: 70px;
@@ -361,6 +362,7 @@ body, html {
 
 .sidebarOption:link {
   color: #000000;
+  text-decoration: none;
 }
 
 .sidebarOption:hover:not(.selected) {
@@ -403,5 +405,28 @@ body, html {
 
 #settings::before {
   background-image: url("../../icons/settings.svg");
+}
+
+a:link {
+  color: #E31837;
+  text-decoration: underline;
+  display: block;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 70px;
+  height: 70px;
+}
+
+#signOut {
+  margin-left: 52.5px;
+  margin-right: 52.5px;
+  position: absolute;
+  cursor: pointer;
+  bottom: 35px;
+  width: calc(100% - 105px);
+}
+
+#signOut:hover {
+  color: #E31837 !important;
 }
 /*# sourceMappingURL=custom.css.map */

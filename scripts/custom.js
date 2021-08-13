@@ -40,6 +40,15 @@ if (pageName === "PT_LANDINGPAGE") {
 
     side.appendChild(settings);
 
+    let signOut = document.createElement('a');
+    signOut.appendChild(document.createTextNode('Sign Out'));
+    signOut.id = 'signOut';
+
+    signOut.setAttribute('href', document.querySelector("#PT_LOGOUT_MENU").getAttribute('href'));
+    signOut.onclick = document.querySelector("#PT_LOGOUT_MENU").onclick;
+
+    side.appendChild(signOut);
+
 
     everything.parentNode.insertBefore(side, everything);
 
