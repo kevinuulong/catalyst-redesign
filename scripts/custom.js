@@ -7,15 +7,16 @@ analytics.dataset.cfBeacon = '{"token": "b71f213f5fe64bc2a37ed73ba5eed81c"}';
 
 document.head.appendChild(analytics);
 
-// Temporary fix for different screen sizes with the same aspect ratio
-// Still want to expand responsiveness the correct way
-let width = window.outerWidth;
-let percent = width / 1920;
-console.log(percent);
-document.body.style.zoom = percent;
-
 // Homepage
 if (pageName === "PT_LANDINGPAGE") {
+    
+    // Temporary fix for different screen sizes with the same aspect ratio
+    // Still want to expand responsiveness the correct way
+    let width = window.outerWidth;
+    let percent = width / 1920;
+    console.log(percent);
+    document.body.style.zoom = percent;
+    
     let everything = document.getElementById("PT_WRAPPER");
     let side = document.createElement('div');
 
